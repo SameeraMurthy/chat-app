@@ -1,0 +1,23 @@
+{
+  "name": "hyper-block",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SameeraMurthy/template-server-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SameeraMurthy/template-server-app/issues"
+  },
+  "homepage": "https://github.com/SameeraMurthy/template-server-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

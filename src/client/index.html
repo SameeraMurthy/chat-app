@@ -4,17 +4,52 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web App Template</title>
-        <script src="scripts/script.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./scripts/templates.js"></script>
+        <script src="./scripts/script.js" defer></script>
         <link rel="stylesheet" href="styles/style.css">
     </head>
-    <body>
+    <body class="">
         <header id="header" class="header">
-            <nav id="nav" class="nav">
-            
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <svg class="bi" width="30" height="30" style="padding-left: 9px" fill="currentColor">
+                            <use xlink:href="assets/icons.svg#chat-left-text"/>
+                        </svg>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
         <main id="main" class="main">
-            <h1 class="text-primary">Web App Template</h1>
+            <section id="app" class="toast-container p-3"></section>
+            <br><br>
+            <form class="input-group mb-1 bottom-0 left-0 position-fixed p-2 bg-light" id="message_form">
+                <input id="message" type="text" name="message" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
+                    <svg class="bi" width="20" height="20" fill="currentColor">
+                        <use xlink:href="assets/icons.svg#arrow-up-circle-fill"/>
+                    </svg>
+                </button>
+            </form>
         </main>
         <footer id="footer" class="footer">
         

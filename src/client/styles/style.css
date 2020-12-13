@@ -11,6 +11,6 @@
 #stats {
     position: -webkit-sticky;
     position: sticky;
-    top: 2px;
+    top: 10px;
     text-align: left;
 }

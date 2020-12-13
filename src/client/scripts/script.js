@@ -50,9 +50,19 @@ $("#message_form").submit(e => {
     }
 })
 
-// $("#message").keyup(() => {
-//     socket.emit("")
-// })
-// $("#message").keydown(() => {
-//     socket.emit("")
-// })
+$("#message").keyup(() => {
+    socket.emit("typing_on", {
+        text: '<span class="spinner-grow spinner-grow-sm" role="status"> \
+                <span class="visually-hidden">Loading...</span> \
+                </span>' + localStorage.getItem("username") + 'is typing...',
+        room: query.get("room")
+    })
+})
+
+$("#message").keydown(() => {
+    socket.emit("typing_off", ``)
+})
+
+socket.on("typing_on", data => {
+    $("#typing").html(data.text)
+})

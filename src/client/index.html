@@ -62,20 +62,22 @@
                                 </span>
                                 <input type="text" id="room" aria-label="Room" class="form-control" readonly>
                             </div>
+                            <span id="typing"></span>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <section id="app" class="toast-container p-3">
                             <div class="toast d-flex align-items-center text-white bg-dark show border-0" role="alert" aria-live="assertive" aria-atomic="true">
                                 <div class="toast-body">
-                                    Welcome to SamChat
+                                    Welcome to SamChat!<br>
+                                    <span id="invite-link">hi</span>
                                 </div>
                             </div>
                         </section>
                     </div>
                 </div>
             </div>
-            <br><br>
+            <br><br><br>
             <form class="input-group bottom-0 left-0 position-fixed p-2 bg-light pb-3" id="message_form">
                 <input id="message" type="text" name="message" class="form-control form-control" placeholder="Message" autocomplete="off" aria-label="Message" aria-describedby="button-addon2">
                 <button class="btn btn-dark" type="submit" id="button-addon2">

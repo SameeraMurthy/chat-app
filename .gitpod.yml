@@ -1,4 +1,0 @@
-image: gitpod/workspace-full-vnc
-
-tasks:
-  - init: npm install
